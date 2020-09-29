@@ -7,17 +7,20 @@ from .models import User, ActiveUser
 def home(request):
     users = ActiveUser.objects.all()
     state = 'active'
-    return render(request, 'Core/home.html', {'users':users, 'hstate':state})
+    title = 'Home'
+    return render(request, 'Core/home.html', {'users':users, 'hstate':state, 'title':title})
 
 # About
 def about(request):
     state = 'active'
-    return render(request, 'Core/about.html', {'astate':state})
+    title = 'About'
+    return render(request, 'Core/about.html', {'astate':state, 'title':title})
 
 # Contact
 def contact(request):
     state = 'active'
-    return render(request, 'Core/contact.html', {'cstate':state})
+    title = 'Contact'
+    return render(request, 'Core/contact.html', {'cstate':state, 'title':title})
 
 # Register
 def register(request):
@@ -29,10 +32,12 @@ def register(request):
     else:
         form = RegistrationForm()
     state = 'active'
-    return render(request, 'Core/register.html', {'form': form, 'rstate':state})
+    title = 'Register'
+    return render(request, 'Core/register.html', {'form': form, 'rstate':state, 'title':title})
 
 # Faulters
 def faulters(request):
     users = ActiveUser.objects.all()
     state = 'active'
-    return render(request, 'Core/faulters.html', {'users': users, 'fstate':state})
+    title = 'Faulter'
+    return render(request, 'Core/faulters.html', {'users': users, 'fstate':state, 'title':title})
