@@ -1,6 +1,6 @@
 # Tracking-System-Django
 
-Setup an Existing Django Project
+# Setup an Existing Django Project
 
 1. Grab a copy of the project.
 
