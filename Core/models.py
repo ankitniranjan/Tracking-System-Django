@@ -12,5 +12,5 @@ class ActiveUser(models.Model):
     fullname = models.CharField(max_length=60)
     reg_no = models.CharField(max_length=60)
     location = models.CharField(max_length=60)
-    speed = models.CharField(max_length=60)
+    speed = models.IntegerField()
     time = models.TimeField()

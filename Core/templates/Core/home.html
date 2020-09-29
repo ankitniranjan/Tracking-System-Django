@@ -17,16 +17,16 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        {% for user in users %}
-            <th scope="row">{{user.id}}</th>
-            <td>{{user.fullname}}</td>
-            <td>{{user.reg_no}}</td>
-            <td>{{user.location}}</td>
-            <td>{{user.speed}}</td>
-            <td>{{user.time}}</td>
-        {% endfor %} 
-      </tr>
+      {% for user in users %}
+        <tr>
+          <th scope="row">{{user.id}}</th>
+          <td>{{user.fullname}}</td>
+          <td>{{user.reg_no}}</td>
+          <td>{{user.location}}</td>
+          <td>{{user.speed}}</td>
+          <td>{{user.time}}</td>
+        </tr>
+      {% endfor %} 
     </tbody>
   </table>
 </div>

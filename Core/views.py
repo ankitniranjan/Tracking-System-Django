@@ -6,15 +6,18 @@ from .models import User, ActiveUser
 # Home
 def home(request):
     users = ActiveUser.objects.all()
-    return render(request, 'Core/home.html', {'users':users})
+    state = 'active'
+    return render(request, 'Core/home.html', {'users':users, 'hstate':state})
 
 # About
 def about(request):
-    return render(request, 'Core/about.html')
+    state = 'active'
+    return render(request, 'Core/about.html', {'astate':state})
 
 # Contact
 def contact(request):
-    return render(request, 'Core/contact.html')
+    state = 'active'
+    return render(request, 'Core/contact.html', {'cstate':state})
 
 # Register
 def register(request):
@@ -25,8 +28,11 @@ def register(request):
             form.save()
     else:
         form = RegistrationForm()
-    return render(request, 'Core/register.html', {'form': form})
+    state = 'active'
+    return render(request, 'Core/register.html', {'form': form, 'rstate':state})
 
 # Faulters
 def faulters(request):
-    return render(request, 'Core/faulters.html')
+    users = ActiveUser.objects.all()
+    state = 'active'
+    return render(request, 'Core/faulters.html', {'users': users, 'fstate':state})
