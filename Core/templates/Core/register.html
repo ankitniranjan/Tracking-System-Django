@@ -16,8 +16,8 @@
     <div class="form group">
       {{fm.label_tag}} {{fm}} {{fm.errors|striptags}}
     </div>
+    <br>
   {% endfor %}
-  <br>
   <input type="submit" value="Register" class="btn btn-primary">
 
   {% if form.non_field_errors %}
